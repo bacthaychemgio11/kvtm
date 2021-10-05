@@ -1,0 +1,24 @@
+/* HARVEST ANIMATION */
+.harvestGain {
+  position: absolute;
+  right: -20px;
+  top: 100px;
+  display: none;
+  animation: riseup 2s ease;
+  animation-play-state: paused;
+}
+
+.harvestGain.activeGainExp {
+  display: block;
+  animation-play-state: running;
+}
+
+@keyframes riseup {
+  0% {
+    top: 100px;
+  }
+
+  100% {
+    top: 50px;
+  }
+}

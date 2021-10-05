@@ -1,0 +1,51 @@
+.potPosition {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 5px 0 0;
+}
+
+.potPosition .potImg {
+  width: 100px;
+  height: 150px;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../../../Images/Plants/Pot_lv3/Pot_1_Empty.png");
+  background-repeat: no-repeat;
+}
+
+/* SEEDING ANIMATION */
+.seedDrop {
+  width: 80px;
+  height: 80px;
+  animation: drop 2s ease infinite;
+  position: absolute;
+  top: 0;
+  left: calc((100% - 80px) / 2);
+  display: none;
+  animation-play-state: paused;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+}
+
+.seedDrop.activeDropSeed {
+  display: block;
+  animation-play-state: running;
+}
+
+/* COUNT-DOWN TIMER */
+.countdownTimer {
+  position: absolute;
+  top: 145px;
+  left: 25px;
+}

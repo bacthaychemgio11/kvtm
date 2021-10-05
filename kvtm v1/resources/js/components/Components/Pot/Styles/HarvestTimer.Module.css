@@ -1,0 +1,33 @@
+.container {
+  position: absolute;
+  top: -20px;
+  left: calc((100% - 80px) / 2);
+  width: 80px;
+  height: 15px;
+  background: white;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+.container.active {
+  visibility: visible;
+}
+
+.bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(68, 202, 68);
+  border-radius: 10px;
+}
+
+.icon {
+  position: absolute;
+  width: 40px;
+  background: url("../../../Images/Sections2/gio-thu-hoach-xoa-nen.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  top: -10px;
+  left: -10px;
+}

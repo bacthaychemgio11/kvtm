@@ -1,0 +1,13 @@
+.icon {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
+  background-image: url(../../../Images/Sections2/icon-cua-hang-tach-nen.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}

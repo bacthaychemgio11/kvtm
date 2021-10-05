@@ -1,0 +1,1 @@
+export const OPEN_LINE = 'OPEN_LINE'
