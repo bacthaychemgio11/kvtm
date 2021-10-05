@@ -8837,63 +8837,44 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function LogInPage() {
-  var formik = (0,formik__WEBPACK_IMPORTED_MODULE_2__.useFormik)({
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.Formik, {
     initialValues: {
-      firstName: '',
-      lastName: '',
-      email: ''
+      username: '',
+      password: ''
     },
     validationSchema: yup__WEBPACK_IMPORTED_MODULE_1__.object({
-      firstName: yup__WEBPACK_IMPORTED_MODULE_1__.string().max(15, 'Must be 15 characters or less').required('Required'),
-      lastName: yup__WEBPACK_IMPORTED_MODULE_1__.string().max(20, 'Must be 20 characters or less').required('Required'),
-      email: yup__WEBPACK_IMPORTED_MODULE_1__.string().email('Invalid email address').required('Required')
+      email: yup__WEBPACK_IMPORTED_MODULE_1__.string().required('Required'),
+      password: yup__WEBPACK_IMPORTED_MODULE_1__.string().required('Required')
     }),
-    onSubmit: function onSubmit(values) {
-      alert(JSON.stringify(values, null, 2));
-    }
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
-    onSubmit: formik.handleSubmit,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-      htmlFor: "firstName",
-      children: "First Name"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-      id: "firstName",
-      name: "firstName",
-      type: "text",
-      onChange: formik.handleChange,
-      value: formik.values.firstName,
-      onBlur: formik.handleBlur
-    }), formik.touched.firstName && formik.errors.firstName ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      children: formik.errors.firstName
-    }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-      htmlFor: "lastName",
-      children: "Last Name"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-      id: "lastName",
-      name: "lastName",
-      type: "text",
-      onChange: formik.handleChange,
-      value: formik.values.lastName,
-      onBlur: formik.handleBlur
-    }), formik.touched.lastName && formik.errors.lastName ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      children: formik.errors.lastName
-    }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-      htmlFor: "email",
-      children: "Email Address"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-      id: "email",
-      name: "email",
-      type: "email",
-      onChange: formik.handleChange,
-      value: formik.values.email,
-      onBlur: formik.handleBlur
-    }), formik.touched.email && formik.errors.email ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      children: formik.errors.email
-    }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-      type: "submit",
-      children: "Submit"
-    })]
+    onSubmit: function onSubmit(values, _ref) {
+      var setSubmitting = _ref.setSubmitting;
+      setTimeout(function () {
+        alert(JSON.stringify(values, null, 2));
+        setSubmitting(false);
+      }, 400);
+    },
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(formik__WEBPACK_IMPORTED_MODULE_2__.Form, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+        htmlFor: "username",
+        children: "Username"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.Field, {
+        name: "username",
+        type: "text"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.ErrorMessage, {
+        name: "username"
+      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+        htmlFor: "password",
+        children: "Password"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.Field, {
+        name: "password",
+        type: "text"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.ErrorMessage, {
+        name: "password"
+      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+        type: "submit",
+        children: "Submit"
+      })]
+    })
   });
 }
 

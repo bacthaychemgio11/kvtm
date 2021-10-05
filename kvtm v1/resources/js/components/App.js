@@ -9,7 +9,7 @@ function App() {
     <React.Fragment>
       <Switch>
         <Route path="/" exact>
-          <LogInPage/>
+          <LogInPage />
         </Route>
         <Route path="/play/:idUser">
           <Game />
