@@ -1,0 +1,13 @@
+.logout {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  z-index: 10;
+  background-image: url('/images/home-tach-nen.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
