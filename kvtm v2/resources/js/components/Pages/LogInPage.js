@@ -32,17 +32,25 @@ function LogInPage() {
                 }, 400);
             }}
         >
-            <Form>
-                <label htmlFor="username">Username</label><br />
-                <Field name="username" type="text" /><br />
-                <ErrorMessage name="username" /> <br />
 
-                <label htmlFor="password">Password</label><br />
-                <Field name="password" type="password" /><br />
-                <ErrorMessage name="password" /> <br />
-
-                <button type="submit">Submit</button>
-            </Form>
+            <div className={styles.wrapper}>
+                <div className={styles.title}>
+                    Login Form
+                </div>
+                <Form>
+                    <div className={styles.field}>
+                        <label htmlFor="username" className={styles.label}>Username</label>
+                        <Field name="username" type="text" className={styles.field_input}/>
+                    </div>
+                    <div className={styles.field}>
+                        <label htmlFor="password" className={styles.label}>Password</label>
+                        <Field name="password" type="password" className={styles.field_input}/>
+                    </div>
+                    <div className={styles.field}>
+                        <button type="submit" className={styles.input}>Submit</button>
+                    </div>
+                </Form>
+            </div>
         </Formik >
     )
 }
