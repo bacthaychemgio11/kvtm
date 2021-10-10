@@ -27,29 +27,30 @@ function LogInPage() {
                                 authCtx.login(response.data.token);
                             }
                         })
-                        .catch(error => { alert(error.message) })
+                        .catch(error => { alert('Login failed!') })
                     setSubmitting(false);
                 }, 400);
             }}
         >
-
-            <div className={styles.wrapper}>
-                <div className={styles.title}>
-                    Login Form
+            <div className={styles.container}>
+                <div className={styles.wrapper}>
+                    <div className={styles.title}>
+                        Login Form
+                    </div>
+                    <Form>
+                        <div className={styles.field}>
+                            <Field name="username" placeholder="Username" type="text" className={styles.field_input} />
+                            <ErrorMessage name="username">{msg => <div className={styles.error}>{msg}</div>}</ErrorMessage>
+                        </div>
+                        <div className={styles.field}>
+                            <Field name="password" placeholder="Password" type="password" className={styles.field_input} />
+                            <ErrorMessage name="password">{msg => <div className={styles.error}>{msg}</div>}</ErrorMessage>
+                        </div>
+                        <div className={styles.field}>
+                            <button type="submit" className={styles.input}>Submit</button>
+                        </div>
+                    </Form>
                 </div>
-                <Form>
-                    <div className={styles.field}>
-                        <label htmlFor="username" className={styles.label}>Username</label>
-                        <Field name="username" type="text" className={styles.field_input}/>
-                    </div>
-                    <div className={styles.field}>
-                        <label htmlFor="password" className={styles.label}>Password</label>
-                        <Field name="password" type="password" className={styles.field_input}/>
-                    </div>
-                    <div className={styles.field}>
-                        <button type="submit" className={styles.input}>Submit</button>
-                    </div>
-                </Form>
             </div>
         </Formik >
     )

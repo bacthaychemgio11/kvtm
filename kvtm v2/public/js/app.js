@@ -8275,9 +8275,9 @@ var flowers = [{
   moneyGain: 200,
   expGain: 50,
   id_bug: 2,
-  chanceToSpawnBug: 100,
-  timeGrowingStage: 3,
-  timeDevelopingStage: 4,
+  chanceToSpawnBug: 30,
+  timeGrowingStage: 35,
+  timeDevelopingStage: 40,
   harvestTimes: 3,
   levelRequire: 3,
   seedImg: '/images/Plants/Seeds/Lavender.png',
@@ -8293,8 +8293,8 @@ var flowers = [{
   expGain: 20,
   id_bug: 1,
   chanceToSpawnBug: 50,
-  timeGrowingStage: 3,
-  timeDevelopingStage: 4,
+  timeGrowingStage: 15,
+  timeDevelopingStage: 20,
   harvestTimes: 3,
   levelRequire: 1,
   seedImg: '/images/Plants/Seeds/Apple.png',
@@ -8309,9 +8309,9 @@ var flowers = [{
   moneyGain: 50,
   expGain: 10,
   id_bug: 1,
-  chanceToSpawnBug: 100,
+  chanceToSpawnBug: 30,
   timeGrowingStage: 10,
-  timeDevelopingStage: 2,
+  timeDevelopingStage: 15,
   harvestTimes: 3,
   levelRequire: 0,
   seedImg: '/images/Plants/Seeds/Rose.png',
@@ -8326,9 +8326,9 @@ var flowers = [{
   moneyGain: 150,
   expGain: 40,
   id_bug: 2,
-  chanceToSpawnBug: 30,
-  timeGrowingStage: 3,
-  timeDevelopingStage: 4,
+  chanceToSpawnBug: 50,
+  timeGrowingStage: 25,
+  timeDevelopingStage: 30,
   harvestTimes: 3,
   levelRequire: 4,
   seedImg: '/images/Plants/Seeds/Cotton.png',
@@ -8344,8 +8344,8 @@ var flowers = [{
   expGain: 80,
   id_bug: 3,
   chanceToSpawnBug: 30,
-  timeGrowingStage: 3,
-  timeDevelopingStage: 4,
+  timeGrowingStage: 35,
+  timeDevelopingStage: 40,
   harvestTimes: 3,
   levelRequire: 6,
   seedImg: '/images/Plants/Seeds/Snowflake.png',
@@ -8361,8 +8361,8 @@ var flowers = [{
   expGain: 100,
   id_bug: 4,
   chanceToSpawnBug: 30,
-  timeGrowingStage: 3,
-  timeDevelopingStage: 4,
+  timeGrowingStage: 55,
+  timeDevelopingStage: 60,
   harvestTimes: 3,
   levelRequire: 8,
   seedImg: '/images/Plants/Seeds/cocoa.png',
@@ -8998,32 +8998,61 @@ function LogInPage() {
             authCtx.login(response.data.token);
           }
         })["catch"](function (error) {
-          alert(error.message);
+          alert('Login failed!');
         });
         setSubmitting(false);
       }, 400);
     },
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(formik__WEBPACK_IMPORTED_MODULE_2__.Form, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("label", {
-        htmlFor: "username",
-        children: "Username"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.Field, {
-        name: "username",
-        type: "text"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.ErrorMessage, {
-        name: "username"
-      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("label", {
-        htmlFor: "password",
-        children: "Password"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.Field, {
-        name: "password",
-        type: "password"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.ErrorMessage, {
-        name: "password"
-      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-        type: "submit",
-        children: "Submit"
-      })]
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].container,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].wrapper,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].title,
+          children: "Login Form"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(formik__WEBPACK_IMPORTED_MODULE_2__.Form, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].field,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.Field, {
+              name: "username",
+              placeholder: "Username",
+              type: "text",
+              className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].field_input
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.ErrorMessage, {
+              name: "username",
+              children: function children(msg) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                  className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].error,
+                  children: msg
+                });
+              }
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].field,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.Field, {
+              name: "password",
+              placeholder: "Password",
+              type: "password",
+              className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].field_input
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(formik__WEBPACK_IMPORTED_MODULE_2__.ErrorMessage, {
+              name: "password",
+              children: function children(msg) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                  className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].error,
+                  children: msg
+                });
+              }
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+            className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].field,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+              type: "submit",
+              className: _Styles_Form_module_css__WEBPACK_IMPORTED_MODULE_5__["default"].input,
+              children: "Submit"
+            })
+          })]
+        })]
+      })
     })
   });
 }
@@ -14144,9 +14173,18 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "._1g9cRGypmwQ0UE3fQ6CmaP {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n._3rueF6jGDjVkkkoixakEkj {\r\n    width: 380px;\r\n    background: #fff;\r\n    border-radius: 15px;\r\n    box-shadow: 3px 8px 20px rgba(0, 0, 0, 0.3);\r\n    margin: 0 auto;\r\n    padding: 25px 30px;\r\n    border: 1px solid rgb(211, 211, 211);\r\n}\r\n\r\n._3rueF6jGDjVkkkoixakEkj ._3ScIcdkpLflSsa7X7ebMe8 {\r\n    font-size: 35px;\r\n    font-weight: 600;\r\n    text-align: center;\r\n    line-height: 100px;\r\n    color: #fff;\r\n    -webkit-user-select: none;\r\n       -moz-user-select: none;\r\n        -ms-user-select: none;\r\n            user-select: none;\r\n    border-radius: 15px;\r\n    background: linear-gradient(-135deg, #c850c0, #4158d0);\r\n}\r\n\r\n._2YGfbdD05h-HBjHIYkp4b8 {\r\n    padding: 10px 30px 50px 30px;\r\n}\r\n\r\n._3HQW8W-SBgl2xkm1MBWA25 {\r\n    width: 100%;\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    flex-direction: column;\r\n}\r\n\r\n.kG0iorahxQgxw0Q8NKoVe {\r\n    height: 50px;\r\n    width: 100%;\r\n    outline: none;\r\n    font-size: 17px;\r\n    padding-left: 20px;\r\n    border: 1px solid lightgrey;\r\n    border-radius: 25px;\r\n    transition: all 0.3s ease;\r\n    margin: 30px 0 0 0;\r\n}\r\n\r\n._3ohJ_mOO-XPoK9dgSaAtIW {\r\n    color: #fff;\r\n    font-size: 20px;\r\n    font-weight: 500;\r\n    cursor: pointer;\r\n    background: linear-gradient(-135deg, #c850c0, #4158d0);\r\n    transition: all 0.3s ease;\r\n    height: 100%;\r\n    width: 100%;\r\n    outline: none;\r\n    padding: 10px 0;\r\n    text-align: center;\r\n    border: 1px solid lightgrey;\r\n    border-radius: 25px;\r\n    margin-top: 30px;\r\n}\r\n\r\n.KTqRWA5xHu20vJKE2VgLu {\r\n    width: 100%;\r\n    color: red;\r\n    padding-left: 20px;\r\n    margin: 15px 0 -15px 0;\r\n}\r\n", ""]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"container": "_1g9cRGypmwQ0UE3fQ6CmaP",
+	"wrapper": "_3rueF6jGDjVkkkoixakEkj",
+	"title": "_3ScIcdkpLflSsa7X7ebMe8",
+	"form": "_2YGfbdD05h-HBjHIYkp4b8",
+	"field": "_3HQW8W-SBgl2xkm1MBWA25",
+	"field_input": "kG0iorahxQgxw0Q8NKoVe",
+	"input": "_3ohJ_mOO-XPoK9dgSaAtIW",
+	"error": "KTqRWA5xHu20vJKE2VgLu"
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
